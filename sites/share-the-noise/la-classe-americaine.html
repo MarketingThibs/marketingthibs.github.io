@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Share the noise - La Classe Americaine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="imgs/share-the-noise-icon_48x.png" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <!-- /Google Font -->
+    <!-- UI kit framework -->
+    <link rel="stylesheet" href="style/uikit-3.0.3/css/uikit.min.css" />
+    <script src="style/uikit-3.0.3/js/uikit.min.js"></script>
+    <script src="style/uikit-3.0.3/js/uikit-icons.min.js"></script>
+    <!-- /UI kit framework -->
+    <script>
+        window.addEventListener("load", function(event) {
+            tag = location.search.split("tag=")[1]
+            hash = document.location.hash;
+            console.log("Hash:" + hash);
+            console.log("tag:" + tag);
+
+
+            //Let's assume the document.location.hash returns #white
+            //hash = '#white';
+
+            if (tag !== "") {
+                //get the color subnav button
+                //color = document.querySelector('a[href="' + hash + '"]');
+                //color = document.querySelector('a[href="' + '#' + tag + '"]');
+                color = document.querySelector('a[href="' + '#' + tag + '"]');
+                //trigger the click event
+                color.click();
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="site-header outer">
+        <nav class="uk-navbar uk-navbar-container" uk-navbar style="z-index: 980;" uk-sticky="bottom: #offset">
+            <div class="uk-navbar-left uk-margin-large-left">
+                <a class="uk-navbar-toggle nav-links" href="#offcanvas-push" uk-toggle>
+                    <span uk-navbar-toggle-icon></span><span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+            <div class="uk-navbar-center">
+                <div class="uk-navbar-item">
+                    <a class="uk-logo" href="home.html">
+                        <img class="site-logo uk-animation-shake" src="imgs/share-the-noise-icon_white_48x.png" alt="Share the noise" height="45" uk-animation-shake/>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+    <!-- nav menu off canvas -->
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h1 class="uk-heading-line uk-text-center"><span>Menu</span></h1>
+            <p><i>Parcourez vos thèmes préférés</i></p>
+            <div class="uk-width-1-1@s uk-width-1-1@m">
+                <ul class="uk-nav uk-nav-default">
+                    <li><a href="home.html" class="menu-links">Home</a></li>
+                    <li><a href="oss-117.html" class="menu-links">OSS 117</a></li>
+                    <li class="uk-active"><a href="la-classe-americaine.html" class="menu-links">La Classe Americaine</a></li>
+                    <li><a href="gros-nanars.html" class="menu-links">Muscles and Nanars</a></li>
+                    <li><a href="classique-fr.html" class="menu-links">Films Français</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- / nav site nav modale -->
+    <!-- video background -->
+    <div class="uk-cover-container resp-uk-height">
+        <video autoplay loop muted playsinline uk-cover class="title-img-responsive">
+                <source src="imgs/classe-americaine/intro-video.mp4" type="video/mp4">
+            </video>
+        <img src="imgs/classe-americaine/gif-intro.gif" alt="OSS117" class="title-img-responsive mobile">
+        <div class="uk-overlay uk-position-center">
+            <h1 class="uk-heading-line uk-text-center" style="color:white;"><span>La Classe Americaine</span></h1>
+        </div>
+    </div>
+    <!-- /video background -->
+    <div class="uk-container-small uk-align-center uk-margin-medium uk-padding-small">
+        <h1 class="uk-heading-line uk-text-center"><span>Le grand détournement - Extraits</span></h1>
+        <!-- /////////////////////////////// OSS /////////////////////////////// -->
+        <div class="uk-child-width-1-1@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-10.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Enculé de ta race</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Jacques —</b></p>
+                            <audio id="encule-de-ta-race">
+                            <source src="sounds/classe-americaine/encule-de-ta-race.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound0()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound0() {
+                                    var sound = document.getElementById("encule-de-ta-race");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-8.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Le train de tes injures roule sur le rail de mon indifférence...</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— George Abitbol —</b></p>
+                            <audio id="le-train-de-tes-injures">
+                                <source src="sounds/classe-americaine/le-train-de-tes-injures.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.x
+                            </audio>
+                            <button onclick="PlaySound1()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound1() {
+                                    var sound = document.getElementById("le-train-de-tes-injures");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-2.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Top, qui suis-je? Je suis un animateur de France 3, je suis déguisé en noir, mon émission passe tous les jours à 18h35, je pose des questions à des champions, je suis, je suis?</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Julien Lepers —</b></p>
+                            <audio id="julien-lepers">
+                                    <source src="sounds/classe-americaine/julien-lepers.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.x
+                                </audio>
+                            <button onclick="PlaySound2()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound2() {
+                                    var sound = document.getElementById("julien-lepers");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-9.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Eh ben, j'ai connu un mec de droite une fois, il avait dix fois plus de classe!</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Jacques —</b></p>
+                            <audio id="jai-connu-un-mec-de-droite">
+                                        <source src="sounds/classe-americaine/jai-connu-un-mec-de-droite.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.x
+                                    </audio>
+                            <button onclick="PlaySound3()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound3() {
+                                    var sound = document.getElementById("jai-connu-un-mec-de-droite");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-0.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Attention! Ce flim n'est pas un flim sur le cyclimse. Merci de votre attention</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Voix Off —</b></p>
+                            <audio id="cyclimse">
+                                            <source src="sounds/classe-americaine/cyclimse.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.x
+                                        </audio>
+                            <button onclick="PlaySound4()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound4() {
+                                    var sound = document.getElementById("cyclimse");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-1.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                                <i>Bon, m'emmerde pas avec tes histoires, je te dis que j'ai mal au bide. J'ai la méga chiasse , j'ai la méga chiasse putain! Excuse moi, mais tu sais ce que c'est? Faut que j'ailles chier, faut que j'ailles chier rapidos</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Peter —</b></p>
+                            <audio id="mega-chiasse">
+                                                <source src="sounds/classe-americaine/mega-chiasse.mp3" type="audio/mpeg">
+                                                Your browser does not support the audio element.x
+                                            </audio>
+                            <button onclick="PlaySound5()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound5() {
+                                    var sound = document.getElementById("mega-chiasse");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-11.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                                <i>Ecoute moi bien mon petit José! Tu baises les ménagères, bien, tu dois avoir le cul qui brille, mais c'est pas ça qu'on appelle la classe</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— George Abitbol —</b></p>
+                            <audio id="cul-qui-brille">
+                                                    <source src="sounds/classe-americaine/cul-qui-brille.mp3" type="audio/mpeg">
+                                                    Your browser does not support the audio element.x
+                                                </audio>
+                            <button onclick="PlaySound6()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound6() {
+                                    var sound = document.getElementById("cul-qui-brille");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-12.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                                <i>Il était trop balourd, trop pataud, il ne voulais pas me lâcher la touffe!</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Christelle —</b></p>
+                            <audio id="me-lacher-latouffe">
+                                                        <source src="sounds/classe-americaine/me-lacher-latouffe.mp3" type="audio/mpeg">
+                                                        Your browser does not support the audio element.x
+                                                    </audio>
+                            <button onclick="PlaySound7()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound7() {
+                                    var sound = document.getElementById("me-lacher-latouffe");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-13.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                                <i>Cooonasse !</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Dave —</b></p>
+                            <audio id="connasse">
+                                <source src="sounds/classe-americaine/connasse.mp3" type="audio/mpeg">
+                                </audio>
+                            <button onclick="PlaySound8()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound8() {
+                                    var sound = document.getElementById("connasse");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-11.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                                <i>AAAAAAAAH voilà enfin le roi de la classe, l'homme trop bien sapé, Abitbol!</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Tueur à Gage —</b></p>
+                            <audio id="roi-de-la-sape">
+                                    <source src="sounds/classe-americaine/roi-de-la-sape.mp3" type="audio/mpeg">
+                                    </audio>
+                            <button onclick="PlaySound9()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound9() {
+                                    var sound = document.getElementById("roi-de-la-sape");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-4.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                                <i>La ferRRRrme? Quelle Ferme? - A la ferme ta gueule casse toi pauve con, espèce de crétin!</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Fermiers —</b></p>
+                            <audio id="a-la-ferme">
+                                        <source src="sounds/classe-americaine/a-la-ferme.mp3" type="audio/mpeg">
+                                        </audio>
+                            <button onclick="PlaySound10()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound10() {
+                                    var sound = document.getElementById("a-la-ferme");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#ClasseAmericaine</div>
+                            <img src="imgs/classe-americaine/classe-americaine-6.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">La Classe Americaine</h3>
+                            <p>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                                <i>Tu sais bien que Madame Félipe la patrone se coupe les nichons pour en faire des ravioles</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— George Abitbol —</b></p>
+                            <audio id="couper-les-nichons">
+                                <source src="sounds/classe-americaine/couper-les-nichons.mp3" type="audio/mpeg">
+                            </audio>
+                            <button onclick="PlaySound11()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound11() {
+                                    var sound = document.getElementById("couper-les-nichons");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /////////////////////////////// OSS /////////////////////////////// -->
+    </div>
+    <!-- footer -->
+    <footer class="site-footer uk-margin-large-top">
+        <div class="uk-child-width-1-1@s uk-child-width-1-1@m uk-text-center uk-padding" uk-grid>
+            <div>
+                <h3 class="footer-header">Share the noise !</h3>
+                <p><i class="footer-subtitle">made by movie fans with</i> ❤</p>
+            </div>
+            <div>
+                <a class="social-link" href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener"><span uk-icon="icon:facebook"></span></a>
+                <a class="social-link" href="{{twitter_url}}" title="Twitter" target="_blank" rel="noopener"><span uk-icon="icon:twitter"></a>
+                <a class="social-link" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="RSS" target="_blank" rel="noopener"><span uk-icon="icon:rss"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+</body>
+
+</html>

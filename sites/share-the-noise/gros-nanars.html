@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Share the noise - Muscles and Nanars</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="imgs/share-the-noise-icon_48x.png" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <!-- /Google Font -->
+    <!-- UI kit framework -->
+    <link rel="stylesheet" href="style/uikit-3.0.3/css/uikit.min.css" />
+    <script src="style/uikit-3.0.3/js/uikit.min.js"></script>
+    <script src="style/uikit-3.0.3/js/uikit-icons.min.js"></script>
+    <!-- /UI kit framework -->
+    <script>
+        window.addEventListener("load", function(event) {
+            tag = location.search.split("tag=")[1]
+            hash = document.location.hash;
+            console.log("Hash:" + hash);
+            console.log("tag:" + tag);
+
+
+            //Let's assume the document.location.hash returns #white
+            //hash = '#white';
+
+            if (tag !== "") {
+                //get the color subnav button
+                //color = document.querySelector('a[href="' + hash + '"]');
+                //color = document.querySelector('a[href="' + '#' + tag + '"]');
+                color = document.querySelector('a[href="' + '#' + tag + '"]');
+                //trigger the click event
+                color.click();
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="site-header outer">
+        <nav class="uk-navbar uk-navbar-container" uk-navbar style="z-index: 980;" uk-sticky="bottom: #offset">
+            <div class="uk-navbar-left uk-margin-large-left">
+                <a class="uk-navbar-toggle nav-links" href="#offcanvas-push" uk-toggle>
+                    <span uk-navbar-toggle-icon></span><span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+            <div class="uk-navbar-center">
+                <div class="uk-navbar-item">
+                    <a class="uk-logo" href="home.html">
+                        <img class="site-logo uk-animation-shake" src="imgs/share-the-noise-icon_white_48x.png" alt="Share the noise" height="45" uk-animation-shake/>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+    <!-- nav menu off canvas -->
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h1 class="uk-heading-line uk-text-center"><span>Menu</span></h1>
+            <p><i>Parcourez vos thèmes préférés</i></p>
+            <div class="uk-width-1-1@s uk-width-1-1@m">
+                <ul class="uk-nav uk-nav-default">
+                    <li><a href="home.html" class="menu-links">Home</a></li>
+                    <li><a href="oss-117.html" class="menu-links">OSS 117</a></li>
+                    <li><a href="la-classe-americaine.html" class="menu-links">La Classe Americaine</a></li>
+                    <li class="uk-active"><a href="gros-nanars.html" class="menu-links">Muscles and Nanars</a></li>
+                    <li><a href="classique-fr.html" class="menu-links">Films Français</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- / nav site nav modale -->
+    <!-- video background -->
+    <div class="uk-cover-container resp-uk-height">
+        <video autoplay loop muted playsinline uk-cover class="title-img-responsive">
+                <source src="imgs/nanars/video-intro.mp4" type="video/mp4">
+            </video>
+        <img src="imgs/nanars/gif-intro.gif" alt="OSS117" class="title-img-responsive mobile">
+        <div class="uk-overlay uk-position-center">
+            <h1 class="uk-heading-line uk-text-center" style="color:white;"><span>Muscles and Nanars</span></h1>
+        </div>
+    </div>
+    <!-- /video background -->
+    <div class="uk-container-small uk-align-center uk-margin-medium uk-padding-small">
+        <h1 class="uk-heading-line uk-text-center"><span>Muscles and Nanars</span></h1>
+        <!-- /////////////////////////////// cards /////////////////////////////// -->
+        <div class="uk-child-width-1-1@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Hitman</div>
+                        <img src="imgs/nanars/hitman-cobra1.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Hitman the Cobra</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>- Philippe!!! Je sais où tu te caches. Vient ici que je te butes enculé.
+                                    <br>- taguueeeeule, vient ici sale enculé !
+                                    <br>- salaud !
+                                 </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Hitman The Cobra —</b></p>
+                        <audio id="philippe">
+                            <source src="sounds/nanars/philippe.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                        <button onclick="PlaySound0()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound0() {
+                                var sound = document.getElementById("philippe");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Stallone</div>
+                        <img src="imgs/nanars/stallone-1.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Demolition Man</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>Et pourquoi pas une laisse dans le cul, c'était plus simple !</i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Stallone —</b></p>
+                        <audio id="une-laisse-dans-le-cul">
+                                <source src="sounds/nanars/une-laisse-dans-le-cul.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.x
+                            </audio>
+                        <button onclick="PlaySound1()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound1() {
+                                var sound = document.getElementById("une-laisse-dans-le-cul");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Seagal</div>
+                        <img src="imgs/nanars/seagal-1.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Menace Toxique</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>Vous voulez jouer dans la cour des grands?
+                                <br>j'envoie 300 agents chez les pecnauds, vous le sentirez, je le garantie; ils vont vous inspecter par tous les trous!
+                                <br>Votre médecin de campagne, il faudra qu'il fasse importer 1 tonne de pommade pour vous soulager des hémoroïdes.
+                            </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Steven Seagal —</b></p>
+                        <audio id="steven-segal-creme">
+                                    <source src="sounds/nanars/steven-segal-creme.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.x
+                                </audio>
+                        <button onclick="PlaySound2()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound2() {
+                                var sound = document.getElementById("steven-segal-creme");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Nanar</div>
+                        <img src="imgs/nanars/seagal-2.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Terrain Miné</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>Je veux que tu protèges cette entrée comme si c'était le pucelage de ta soeur, OK tonto?</i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Stone —</b></p>
+                        <audio id="pucelage-de-ta-soeur">
+                                        <source src="sounds/nanars/pucelage-de-ta-soeur.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.x
+                                    </audio>
+                        <button onclick="PlaySound3()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound3() {
+                                var sound = document.getElementById("pucelage-de-ta-soeur");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#ChuckNorris</div>
+                        <img src="imgs/nanars/chuck-1.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Delta Force 2</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>- Votre contact dans le village est une indienne, elle s'appelle Quinquina Esquintla
+                                <br>- Elle est sûre?
+                                <br>- Ramon a d'abord tué son mari, puis assassiné son bébé, et dans le corps de l'enfant il a pass des kilos de cocaïne et il a violé la fille...   
+                            </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Chuck —</b></p>
+                        <audio id="delta-force-2-quinquina">
+                                            <source src="sounds/nanars/delta-force-2-quinquina.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.x
+                                        </audio>
+                        <button onclick="PlaySound4()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound4() {
+                                var sound = document.getElementById("delta-force-2-quinquina");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Nanar</div>
+                        <img src="imgs/nanars/jaguar-force.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Jaguar Force</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>inaudible ouinouinnnnnn ouinnnnn
+                            </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— XXX —</b></p>
+                        <audio id="jaguar-force-crying">
+                                                <source src="sounds/nanars/jaguar-force-crying.mp3" type="audio/mpeg">
+                                                Your browser does not support the audio element.x
+                                            </audio>
+                        <button onclick="PlaySound5()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound5() {
+                                var sound = document.getElementById("jaguar-force-crying");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Nanar</div>
+                        <img src="imgs/nanars/hulk-hogan.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Cadence de combat</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>- snif snif snif. Qu'est-ce qui pue comme ça?
+                                <br>- euh euuuuh le caca
+                                <br>- ooooh, le caca ???? 
+                            </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Hulk —</b></p>
+                        <audio id="hulk-hogan-caca">
+                                                <source src="sounds/nanars/hulk-hogan-caca.mp3" type="audio/mpeg">
+                                                Your browser does not support the audio element.x
+                                            </audio>
+                        <button onclick="PlaySound6()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound6() {
+                                var sound = document.getElementById("hulk-hogan-caca");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#ChuckNorris</div>
+                        <img src="imgs/nanars/chuck-2.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Portés Disparus 3</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>- Bradock, je vous préviens! Attention où vous mettez le pieds!
+                                    <br>- Je mets les pieds où je veux Little John, et c'est souvent dans la gueule !
+                                </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Chuck —</b></p>
+                        <audio id="chuck-norris-little-john">
+                                                    <source src="sounds/nanars/chuck-norris-little-john.mp3" type="audio/mpeg">
+                                                    Your browser does not support the audio element.x
+                                                </audio>
+                        <button onclick="PlaySound7()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound7() {
+                                var sound = document.getElementById("chuck-norris-little-john");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#ChuckNorris</div>
+                        <img src="imgs/nanars/chuck-3.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Invasion U.S.A</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                Su tu te pointes encore tu peux être sûr que tu repars avec la bite dans un tupperware
+                            </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Chuck —</b></p>
+                        <audio id="chuck-norris-tupperware">
+                                                        <source src="sounds/nanars/chuck-norris-tupperware.mp3" type="audio/mpeg">
+                                                        Your browser does not support the audio element.x
+                                                    </audio>
+                        <button onclick="PlaySound8()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound8() {
+                                var sound = document.getElementById("chuck-norris-tupperware");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Nanar</div>
+                        <img src="imgs/nanars/nanars.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Maîtresses très particulières</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                   Tu retires tout, y compris le tampax
+                                </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— X —</b></p>
+                        <audio id="desape-toi">
+                                <source src="sounds/nanars/desape-toi.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.x
+                            </audio>
+                        <button onclick="PlaySound9()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound9() {
+                                var sound = document.getElementById("desape-toi");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Nanar</div>
+                        <img src="imgs/nanars/black-cobra.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Black Cobra</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                Compte là-dessus et bois de l'eau
+                            </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Fred —</b></p>
+                        <audio id="black-cobra-compte-la-dessus">
+                            <source src="sounds/nanars/black-cobra-compte-la-dessus.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                        <button onclick="PlaySound10()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound10() {
+                                var sound = document.getElementById("black-cobra-compte-la-dessus");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Nanar</div>
+                        <img src="imgs/nanars/nanars-2.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Adult Movie</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                je vais défoncer ta gueule de conne avec ma grosse queue... Mais avant va falloir que tu le mérites!
+                                </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— X —</b></p>
+                        <audio id="je-vais-te-defoncer">
+                                <source src="sounds/nanars/je-vais-te-defoncer.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.x
+                            </audio>
+                        <button onclick="PlaySound11()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound11() {
+                                var sound = document.getElementById("je-vais-te-defoncer");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /////////////////////////////// cards /////////////////////////////// -->
+    </div>
+    <!-- footer -->
+    <footer class="site-footer uk-margin-large-top">
+        <div class="uk-child-width-1-1@s uk-child-width-1-1@m uk-text-center uk-padding" uk-grid>
+            <div>
+                <h3 class="footer-header">Share the noise !</h3>
+                <p><i class="footer-subtitle">made by movie fans with</i> ❤</p>
+            </div>
+            <div>
+                <a class="social-link" href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener"><span uk-icon="icon:facebook"></span></a>
+                <a class="social-link" href="{{twitter_url}}" title="Twitter" target="_blank" rel="noopener"><span uk-icon="icon:twitter"></a>
+                <a class="social-link" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="RSS" target="_blank" rel="noopener"><span uk-icon="icon:rss"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+</body>
+
+</html>

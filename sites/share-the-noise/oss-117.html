@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Share the noise - OSS 117</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="imgs/share-the-noise-icon_48x.png" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <!-- /Google Font -->
+    <!-- UI kit framework -->
+    <link rel="stylesheet" href="style/uikit-3.0.3/css/uikit.min.css" />
+    <script src="style/uikit-3.0.3/js/uikit.min.js"></script>
+    <script src="style/uikit-3.0.3/js/uikit-icons.min.js"></script>
+    <!-- /UI kit framework -->
+    <script>
+        window.addEventListener("load", function(event) {
+            tag = location.search.split("tag=")[1]
+            hash = document.location.hash;
+            console.log("Hash:" + hash);
+            console.log("tag:" + tag);
+
+
+            //Let's assume the document.location.hash returns #white
+            //hash = '#white';
+
+            if (tag !== "") {
+                //get the color subnav button
+                //color = document.querySelector('a[href="' + hash + '"]');
+                //color = document.querySelector('a[href="' + '#' + tag + '"]');
+                color = document.querySelector('a[href="' + '#' + tag + '"]');
+                //trigger the click event
+                color.click();
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="site-header outer">
+        <nav class="uk-navbar uk-navbar-container" uk-navbar style="z-index: 980;" uk-sticky="bottom: #offset">
+            <div class="uk-navbar-left uk-margin-large-left">
+                <a class="uk-navbar-toggle nav-links" href="#offcanvas-push" uk-toggle>
+                    <span uk-navbar-toggle-icon></span><span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+            <div class="uk-navbar-center">
+                <div class="uk-navbar-item">
+                    <a class="uk-logo" href="home.html">
+                        <img class="site-logo uk-animation-shake" src="imgs/share-the-noise-icon_white_48x.png" alt="Share the noise" height="45" uk-animation-shake/>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+    <!-- nav menu off canvas -->
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h1 class="uk-heading-line uk-text-center"><span>Menu</span></h1>
+            <p><i>Parcourez vos thèmes préférés</i></p>
+            <div class="uk-width-1-1@s uk-width-1-1@m">
+                <ul class="uk-nav uk-nav-default">
+                    <li><a href="home.html" class="menu-links">Home</a></li>
+                    <li class="uk-active"><a href="oss-117.html" class="menu-links">OSS 117</a></li>
+                    <li><a href="la-classe-americaine.html" class="menu-links">La Classe Americaine</a></li>
+                    <li><a href="gros-nanars.html" class="menu-links">Muscles and Nanars</a></li>
+                    <li><a href="classique-fr.html" class="menu-links">Films Français</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- / nav site nav modale -->
+    <!-- video background -->
+    <div class="uk-cover-container resp-uk-height">
+        <video autoplay loop muted playsinline uk-cover class="title-img-responsive">
+                <source src="imgs/oss117/video-bambino.mp4" type="video/mp4">
+            </video>
+        <img src="https://media.giphy.com/media/66pk3qYDIVbIk/giphy.gif" alt="OSS117" class="title-img-responsive mobile">
+        <div class="uk-overlay uk-position-center">
+            <h1 class="uk-heading-line uk-text-center" style="color:white;"><span>OSS 117 - the best of</span></h1>
+        </div>
+    </div>
+    <!-- /video background -->
+    <div class="uk-container-small uk-align-center uk-margin-medium uk-padding-small">
+        <h1 class="uk-heading-line uk-text-center"><span>OSS 117 - Extraits</span></h1>
+        <!-- /////////////////////////////// OSS /////////////////////////////// -->
+        <div class="uk-child-width-1-1@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/amicale-anciens.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Est-ce qu'il serait par hasard possible, j'ignore si ca existe, de consulter un fichier sur lequel il y aurait les noms d'anciens naziz établis au brézil. Il y a forcément une amicale d'anciens nazis, un club, une association</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Hubert Bonisseur de La Bath —</b></p>
+                            <audio id="amicale-anciens-nazis">
+                            <source src="sounds/oss117/amicale-anciens-nazis.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound0()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound0() {
+                                    var sound = document.getElementById("amicale-anciens-nazis");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/bill-2.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>HAHAHAHAHA you stupid son of the bitch</i><span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span></p>
+                            <p class="card-subtitle uk-text-center"><b>— Bill Tremendous —</b></p>
+                            <audio id="rire-bill-1">
+                            <source src="sounds/oss117/rire-bill-1.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound1()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound1() {
+                                    var sound = document.getElementById("rire-bill-1");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/bill-1.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Comme tu voudras my ass licking cock sucker son of the bitch HAHAHAHAHAaaaah</i><span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span></p>
+                            <p class="card-subtitle uk-text-center"><b>— Bill Tremendous —</b></p>
+                            <audio id="rire-bill-2">
+                            <source src="sounds/oss117/rire-bill-2.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound2()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound2() {
+                                    var sound = document.getElementById("rire-bill-2");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/hubert-5.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Une dictature, c'est quand les gens sont communistes, déjà, qu'ils ont froid, avec des chapeaux gris et des chaussures à fermeture éclaire </i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Hubert Bonisseur de La Bath —</b></p>
+                            <audio id="une-dictature">
+                            <source src="sounds/oss117/une-dictature.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound3()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound3() {
+                                    var sound = document.getElementById("une-dictature");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/hubert-4.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Ca me sert à rien hum ...</i><span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span></p>
+                            <p class="card-subtitle uk-text-center"><b>— Hubert Bonisseur de La Bath —</b></p>
+                            <audio id="me-sert-a-rien">
+                            <source src="sounds/oss117/me-sert-a-rien.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound4()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound4() {
+                                    var sound = document.getElementById("me-sert-a-rien");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/hubert-2.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>D'aucuns ont des aventures, je suis une aventure ! </i><span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span></p>
+                            <p class="card-subtitle uk-text-center"><b>— Hubert Bonisseur de La Bath —</b></p>
+                            <audio id="je-suis-une-aventure">
+                            <source src="sounds/oss117/je-suis-une-aventure.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound5()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound5() {
+                                    var sound = document.getElementById("je-suis-une-aventure");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/hubert-1.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>J'appelle ça la France Mademoiselle. Et pas n'importe laquelle; la France du Général De Gaulle!</i><span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span></p>
+                            <p class="card-subtitle uk-text-center"><b>— Hubert Bonisseur de La Bath —</b></p>
+                            <audio id="france-du-general-de-gaulle">
+                            <source src="sounds/oss117/france-du-general-de-gaulle.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound6()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound6() {
+                                    var sound = document.getElementById("france-du-general-de-gaulle");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/jean-berenice.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>A l'occasion, je vous mettrais bien un petit coup de poliche...</i><span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span></p>
+                            <p class="card-subtitle uk-text-center"><b>— Hubert Bonisseur de La Bath —</b></p>
+                            <audio id="petit-coup-poliche">
+                            <source src="sounds/oss117/petit-coup-poliche.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound7()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound7() {
+                                    var sound = document.getElementById("petit-coup-poliche");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/hubert-3.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>wahid zutcha clepta arba hamza</i><span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span></p>
+                            <p class="card-subtitle uk-text-center"><b>— Hubert Bonisseur de La Bath —</b></p>
+                            <audio id="compter-en-arabe">
+                            <source src="sounds/oss117/compter-en-arabe.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound8()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound8() {
+                                    var sound = document.getElementById("compter-en-arabe");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/oss117largeg.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Je... Je connais cette théorie...</i><span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span></p>
+                            <p class="card-subtitle uk-text-center"><b>— Hubert Bonisseur de La Bath —</b></p>
+                            <audio id="connais-cette-theorie">
+                            <source src="sounds/oss117/connais-cette-theorie.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound9()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound9() {
+                                    var sound = document.getElementById("connais-cette-theorie");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">#OSS117</div>
+                            <img src="imgs/oss117/princesse-al-tarouk.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">OSS 117</h3>
+                            <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span><i>Je peux vous assurer que la princesse Al Tarouk vaut le détour. Et elle GUEULE mont vieux, comme une poissonière de Ménilmontant!</i>
+                                <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                            </p>
+                            <p class="card-subtitle uk-text-center"><b>— Hubert Bonisseur de La Bath —</b></p>
+                            <audio id="poissoniere-menilmontant">
+                            <source src="sounds/oss117/poissoniere-menilmontant.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                            <button onclick="PlaySound10()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                            <script>
+                                function PlaySound10() {
+                                    var sound = document.getElementById("poissoniere-menilmontant");
+                                    sound.play()
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /////////////////////////////// OSS /////////////////////////////// -->
+    </div>
+    <!-- footer -->
+    <footer class="site-footer uk-margin-large-top">
+        <div class="uk-child-width-1-1@s uk-child-width-1-1@m uk-text-center uk-padding" uk-grid>
+            <div>
+                <h3 class="footer-header">Share the noise !</h3>
+                <p><i class="footer-subtitle">made by movie fans with</i> ❤</p>
+            </div>
+            <div>
+                <a class="social-link" href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener"><span uk-icon="icon:facebook"></span></a>
+                <a class="social-link" href="{{twitter_url}}" title="Twitter" target="_blank" rel="noopener"><span uk-icon="icon:twitter"></a>
+                <a class="social-link" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="RSS" target="_blank" rel="noopener"><span uk-icon="icon:rss"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+</body>
+
+</html>

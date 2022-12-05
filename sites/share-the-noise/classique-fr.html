@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Share the noise - Films Français</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="imgs/share-the-noise-icon_48x.png" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+    <!-- /Google Font -->
+    <!-- UI kit framework -->
+    <link rel="stylesheet" href="style/uikit-3.0.3/css/uikit.min.css" />
+    <script src="style/uikit-3.0.3/js/uikit.min.js"></script>
+    <script src="style/uikit-3.0.3/js/uikit-icons.min.js"></script>
+    <!-- /UI kit framework -->
+    <script>
+        window.addEventListener("load", function(event) {
+            tag = location.search.split("tag=")[1]
+            hash = document.location.hash;
+            console.log("Hash:" + hash);
+            console.log("tag:" + tag);
+
+
+            //Let's assume the document.location.hash returns #white
+            //hash = '#white';
+
+            if (tag !== "") {
+                //get the color subnav button
+                //color = document.querySelector('a[href="' + hash + '"]');
+                //color = document.querySelector('a[href="' + '#' + tag + '"]');
+                color = document.querySelector('a[href="' + '#' + tag + '"]');
+                //trigger the click event
+                color.click();
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="site-header outer">
+        <nav class="uk-navbar uk-navbar-container" uk-navbar style="z-index: 980;" uk-sticky="bottom: #offset">
+            <div class="uk-navbar-left uk-margin-large-left">
+                <a class="uk-navbar-toggle nav-links" href="#offcanvas-push" uk-toggle>
+                    <span uk-navbar-toggle-icon></span><span class="uk-margin-small-left">Menu</span>
+                </a>
+            </div>
+            <div class="uk-navbar-center">
+                <div class="uk-navbar-item">
+                    <a class="uk-logo" href="home.html">
+                        <img class="site-logo uk-animation-shake" src="imgs/share-the-noise-icon_white_48x.png" alt="Share the noise" height="45" uk-animation-shake/>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- /header -->
+    <!-- nav menu off canvas -->
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h1 class="uk-heading-line uk-text-center"><span>Menu</span></h1>
+            <p><i>Parcourez vos thèmes préférés</i></p>
+            <div class="uk-width-1-1@s uk-width-1-1@m">
+                <ul class="uk-nav uk-nav-default">
+                    <li><a href="home.html" class="menu-links">Home</a></li>
+                    <li><a href="oss-117.html" class="menu-links">OSS 117</a></li>
+                    <li><a href="la-classe-americaine.html" class="menu-links">La Classe Americaine</a></li>
+                    <li><a href="gros-nanars.html" class="menu-links">Muscles and Nanars</a></li>
+                    <li class="uk-active"><a href="classique-fr.html" class="menu-links">Films Français</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- / nav site nav modale -->
+    <!-- video background -->
+    <div class="uk-cover-container resp-uk-height">
+        <video autoplay loop muted playsinline uk-cover class="title-img-responsive">
+                <source src="imgs/francais/la-cite-de-la-peur.mp4" type="video/mp4">
+            </video>
+        <img src="imgs/francais/la-cite-de-la-peur.gif" alt="Francais" class="title-img-responsive mobile">
+        <div class="uk-overlay uk-position-center">
+            <h1 class="uk-heading-line uk-text-center" style="color:white;"><span>Classiques français</span></h1>
+        </div>
+    </div>
+    <!-- /video background -->
+    <div class="uk-container-small uk-align-center uk-margin-medium uk-padding-small">
+        <h1 class="uk-heading-line uk-text-center"><span>Classiques français</span></h1>
+        <!-- /////////////////////////////// OSS /////////////////////////////// -->
+        <div class="uk-child-width-1-1@s uk-child-width-1-3@m uk-text-center" uk-grid="masonry: true">
+            <!-- card -->
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#LesNuls</div>
+                        <img src="imgs/francais/la-cite-de-la-peur-1.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">La Cité de la Peur</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                    Buuuuuurrrrrrpppp. Quand je suis content je vomis, et la je suis... Hyper content !
+                                </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Dominique Farrugia —</b></p>
+                        <audio id="cite-de-la-peur-1">
+                            <source src="sounds/hits/cite-de-la-peur-1.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                        <button onclick="PlaySound0()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound0() {
+                                var sound = document.getElementById("cite-de-la-peur-1");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Transports</div>
+                        <img src="imgs/francais/sncf-1.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Jingle SNCF</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                ba po paaa dao
+                            </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— un train —</b></p>
+                        <audio id="sncf-jingle">
+                                            <source src="sounds/hits/sncf-jingle.mp3" type="audio/mpeg">
+                                            Your browser does not support the audio element.x
+                                        </audio>
+                        <button onclick="PlaySound1()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound1() {
+                                var sound = document.getElementById("sncf-jingle");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Culte</div>
+                        <img src="imgs/francais/papy-fait-resistance.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Papy fait de la Resistance</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                    Hop hop hop hop hop hop hop !
+                                </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Gérard Jugnot —</b></p>
+                        <audio id="papy-fait-de-la-resistance">
+                            <source src="sounds/hits/papy-fait-de-la-resistance.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                        <button onclick="PlaySound2()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound2() {
+                                var sound = document.getElementById("papy-fait-de-la-resistance");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Culte</div>
+                        <img src="imgs/francais/pete-doherty.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Petit Journal</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                Pete Doherty si tu me vois, je t'encule, OK ?! Parceque t'es q'un connard!
+                                    </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Inconnue —</b></p>
+                        <audio id="pete-doherty">
+                            <source src="sounds/hits/pete-doherty.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                        <button onclick="PlaySound3()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound3() {
+                                var sound = document.getElementById("pete-doherty");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Mozinor</div>
+                        <img src="imgs/francais/mozinor-toto.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Mozinor & Toto</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                Et celle là c'est toto, il di à son père: 
+                                <br> - Ah, je crois que je la connais celle là
+                                <br> - Hé papa, c'est quoi cette bouteille de lait?
+                                <br> - et la son père à toto il l'encule
+                                <br> hahahahaha
+                            </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Mozinor —</b></p>
+                        <audio id="mozinor-blague-toto">
+                            <source src="sounds/hits/mozinor-blague-toto.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.x
+                        </audio>
+                        <button onclick="PlaySound3()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound3() {
+                                var sound = document.getElementById("mozinor-blague-toto");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#JeanYann</div>
+                        <img src="imgs/francais/champanus-et-des-olives.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">2h moins le quart avant J-C</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                Hé, ça n'empechera pas de prendre un Champanus et des olives, hein !
+                                </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Jean Yann —</b></p>
+                        <audio id="champanus-et-des-olives">
+                                <source src="sounds/hits/champanus-et-des-olives.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.x
+                            </audio>
+                        <button onclick="PlaySound4()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound4() {
+                                var sound = document.getElementById("champanus-et-des-olives");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Bronzés</div>
+                        <img src="imgs/francais/les-bronzes-1.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Les bronzés font du ski</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                J'ai pas "accroché", j'ai ripé ! Ne parle pas de ce que tu ne connais pas!
+                            </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Jean Yann —</b></p>
+                        <audio id="les-bronzes-1">
+                                    <source src="sounds/hits/les-bronzes-1.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.x
+                                </audio>
+                        <button onclick="PlaySound5()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound5() {
+                                var sound = document.getElementById("les-bronzes-1");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- /card -->
+            <!-- card -->
+            <div>
+                <div class="uk-card uk-card-default" uk-scrollspy="cls: uk-animation-slide-bottom-medium; ">
+                    <div class="uk-card-media-top">
+                        <div class="uk-card-badge uk-label">#Culte</div>
+                        <img src="imgs/francais/pamela-anderson.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Petit Journal</h3>
+                        <p><span class="lightgreen-span" uk-icon="icon:  chevron-double-left; ratio: 1.4"></span>
+                            <i>
+                                Pamela Anderson, elle est très distinguée
+                                        </i>
+                            <span class="lightgreen-span" uk-icon="icon:  chevron-double-right; ratio: 1.4"></span>
+                        </p>
+                        <p class="card-subtitle uk-text-center"><b>— Inconnue —</b></p>
+                        <audio id="pamela-anderson">
+                                <source src="sounds/hits/pamela-anderson.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.x
+                            </audio>
+                        <button onclick="PlaySound6()" class="uk-button uk-button-secondary"><span uk-icon="icon: play-circle"></span> Jouer</button>
+                        <script>
+                            function PlaySound6() {
+                                var sound = document.getElementById("pamela-anderson");
+                                sound.play()
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- /card -->
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="site-footer uk-margin-large-top">
+        <div class="uk-child-width-1-1@s uk-child-width-1-1@m uk-text-center uk-padding" uk-grid>
+            <div>
+                <h3 class="footer-header">Share the noise !</h3>
+                <p><i class="footer-subtitle">made by movie fans with</i> ❤</p>
+            </div>
+            <div>
+                <a class="social-link" href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener"><span uk-icon="icon:facebook"></span></a>
+                <a class="social-link" href="{{twitter_url}}" title="Twitter" target="_blank" rel="noopener"><span uk-icon="icon:twitter"></a>
+                <a class="social-link" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" title="RSS" target="_blank" rel="noopener"><span uk-icon="icon:rss"></a>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+</body>
+
+</html>
