@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="logo-sfmc-builder.svg"
+   inkscape:version="1.2 (dc2aeda, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8">
+    <rect
+       x="18.722951"
+       y="30.034734"
+       width="207.90277"
+       height="174.74754"
+       id="rect345" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="2.5636984"
+     inkscape:cx="106.87685"
+     inkscape:cy="78.207328"
+     inkscape:window-width="1680"
+     inkscape:window-height="941"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="#f2784b"
+     d="m 180.53057,36.476029 c 17.26271,24.01332 14.59483,63.146148 -4.08027,96.794461 -18.67511,33.50007 -53.35745,61.36739 -85.99965,60.32978 C 57.808446,192.56265 27.049445,162.62011 14.02395,132.23288 0.99845517,101.69741 5.8633992,70.717247 21.242899,47.889771 36.622399,25.062287 62.673389,10.091015 94.217058,7.1264067 125.91765,4.013568 163.26787,12.610933 180.53057,36.476029 Z"
+     id="path2"
+     style="stroke-width:1.5252" />
+  <text
+     xml:space="preserve"
+     id="text343"
+     style="font-size:29.3333px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;white-space:pre;shape-inside:url(#rect345)"
+     x="48.043892"
+     y="0"
+     transform="translate(-26.524181,6.2409829)"><tspan
+       x="81.803432"
+       y="57.315125"
+       id="tspan1442"><tspan
+         style="font-family:Limelight;-inkscape-font-specification:Limelight;text-align:center;text-anchor:middle;fill:#fafafa"
+         id="tspan1440">SFMC
+</tspan></tspan><tspan
+       x="54.962317"
+       y="95.706635"
+       id="tspan1446"><tspan
+         style="font-family:Limelight;-inkscape-font-specification:Limelight;text-align:center;text-anchor:middle;fill:#fafafa"
+         id="tspan1444">Building </tspan></tspan><tspan
+       x="82.390671"
+       y="134.09814"
+       id="tspan1450"><tspan
+         style="font-family:Limelight;-inkscape-font-specification:Limelight;text-align:center;text-anchor:middle;fill:#fafafa"
+         id="tspan1448">Tools</tspan></tspan></text>
+</svg>

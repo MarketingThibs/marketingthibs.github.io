@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg4280"
+   sodipodi:docname="logo-builder.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4284">
+    <rect
+       x="28.464419"
+       y="34.456929"
+       width="159.69054"
+       height="33.416531"
+       id="rect8792" />
+  </defs>
+  <sodipodi:namedview
+     id="namedview4282"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="4.005"
+     inkscape:cx="100"
+     inkscape:cy="100"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4280" />
+  <path
+     fill="#8A3FFC"
+     d="M 197.65715,32.766198 C 199.61651,48.775299 145.73428,72.78895 105.56751,97.287724 65.400754,122.02906 38.949473,147.25552 22.050045,139.7361 4.9056957,132.21667 -2.6868007,91.951358 8.3345658,63.329027 19.600853,34.706696 49.970841,17.727347 93.811387,13.118667 137.89685,8.752548 195.6978,16.757098 197.65715,32.766198 Z"
+     id="path4278"
+     style="fill:#f2784b;fill-opacity:1;stroke-width:2.43738" />
+  <text
+     xml:space="preserve"
+     id="text8790"
+     style="font-size:26.6667px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;white-space:pre;shape-inside:url(#rect8792)"
+     transform="rotate(-30.282477,117.85886,99.733215)"><tspan
+       x="28.464844"
+       y="59.257063"
+       id="tspan4852"><tspan
+         style="font-family:Limelight;-inkscape-font-specification:'Limelight, Normal';fill:#ececec"
+         id="tspan4850">MC Builder</tspan></tspan></text>
+  <style
+     id="style14968">.a{fill:#0c233b}.b{fill:#1580af}.c{fill:#159ad6}.d{fill:#5b4026}.e{fill:#693521}.f{fill:#815a37}.g{fill:#c1c0bd}.h{fill:#e8e7e6}.i{fill:#f6f7f7}.j{fill:#fdd5a6}</style>
+</svg>

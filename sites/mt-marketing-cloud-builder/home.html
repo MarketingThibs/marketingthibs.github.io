@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MC Unsub Page Builder</title>
+  <!-- SEO -->
+  <meta property="og:title" content="MC Unsub Page Builder">
+  <meta name="description" content="Create unsubscription cloud pages for Salesforce Marketing Cloud">
+  <meta property="og:description" content="Create unsubscription cloud pages for Salesforce Marketing Cloud">
+  <meta property="og:image" content="images/logo-sfmc-builder.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="304">
+  <meta property="og:image:height" content="202">
+  <meta property="og:url" content="https://mt-marketing-cloud-builder.herokuapp.com/home.html">
+  <!-- Bulma -->
+  <link rel="stylesheet" href="../../styles/bulma/css/bulma.css">
+  <link rel="stylesheet" href="../../index.html">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/f5be78694e.js" crossorigin="anonymous"></script>
+  <!-- search for icons
+    https://fontawesome.com/search?q=rocket&s=solid%2Cbrands
+     -->
+  <link rel="shortcut icon" href="images/einstein-figure-icon.png" type="image/png">
+  <!-- code editor -->
+  <script src="codemirror-5.65.2/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="codemirror-5.65.2/lib/codemirror.css">
+  <link rel="stylesheet" href="codemirror-5.65.2/theme/material.css">
+  <script src="codemirror-5.65.2/mode/javascript/javascript.js"></script>
+  <script src="codemirror-5.65.2/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="codemirror-5.65.2/mode/css/css.js"></script>
+  <script src="codemirror-5.65.2/mode/xml/xml.js"></script>
+
+  <!-- idea for color picker
+    https://casesandberg.github.io/react-color/
+    -->
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+  <style>
+    .hero-body {
+      background-image: url(images/hero-backgound.png);
+      background-size: cover;
+    }
+
+    .hero-body .title {
+      font-family: 'Limelight', cursive;
+      color: #f2784b;
+    }
+
+    .footer figure {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Color inputs positions */
+    .img-map-container {
+      position: relative;
+    }
+    img.unsub-map {
+      filter: blur(3px);
+      -webkit-filter: blur(3px);
+    }
+    .pageNavBarColor {
+      position: absolute;
+      top: 3%;
+      left: 5%;
+    }
+    .pageHeaderTextColor {
+      position: absolute;
+      left: 14%;
+      top: 26%;
+    }
+    .pageBodyColor {
+      position: absolute;
+      left: 2%;
+      top: 45%;
+    }
+    .pageBodyTitleColor {
+      position: absolute;
+      left: 16%;
+      top: 54%;
+    }
+    .pageBodyTextColor {
+      position: absolute;
+      left: 12%;
+      top: 65%;
+    }
+
+    .pageBtnColor {
+      position: absolute;
+      left: 12%;
+      top: 76%;
+    }
+
+    .pageBtnTextColor {
+      position: absolute;
+      left: 12%;
+      top: 80%;
+    }
+
+    .pageBtnHoverColor {
+      position: absolute;
+      left: 72%;
+      top: 76%;
+    }
+
+    .pageBtnTextHoverColor {
+      position: absolute;
+      left: 72%;
+      top: 80%;
+    }
+
+    .pageFooterColor {
+      position: absolute;
+      left: 7%;
+      bottom: 7%;
+    }
+
+    .pageFooterTextColor {
+      position: absolute;
+      position: absolute;
+      left: 30%;
+      bottom: 3%;
+    }
+    .light-label label {
+      color: #FAFAFA;
+      font-style: italic;
+    }
+    .dark-label label {
+      color: #333;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero has-background-info-light has-text-grey-dark is-medium">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <header class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                    <img src="../../images/logo-thibs-hub-dark.png" alt="Logo">
+                </a>
+                <span class="navbar-burger" data-target="navbarMenuHeroC">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="navbarMenuHeroC" class="navbar-menu">
+                <div class="navbar-end has-text-light">
+                    <a href="../../index.html" class="navbar-item is-active">
+                        Home
+                    </a>
+                    <span class="navbar-item">
+                        <div class="dropdown is-hoverable is-inverted">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-rocket"></i>
+                                    </span>
+                                    <span>Tools</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <a href="home.html"
+                                            class="dropdown-item">
+                                            Unsub Page Builder
+                                        </a>
+                                        <a href="../oss-ipsum/index.html" class="dropdown-item">
+                                            Oss Ipsum Generator
+                                        </a>
+                                        <a href="https://marketplace.visualstudio.com/items?itemName=MarketingThibs.ampscriptsnippets"
+                                            class="dropdown-item">
+                                            AMPscript code snippet
+                                        </a>
+                                        <a href="https://marketplace.visualstudio.com/items?itemName=MarketingThibs.oss117psum"
+                                            class="dropdown-item">
+                                            OSS VS Extension
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="navbar-item">
+                        <a href="https://github.com/MarketingThibs" class="button is-warning is-inverted">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>MarketingThibs</span>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>     
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="title">
+          Marketing Cloud Building Tools
+        </p>
+        <p class="subtitle">
+          Build unsubscription cloud pages
+        </p>
+      </div>
+    </div>
+
+
+  </section>
+  <section class="section has-background-info-dark has-text-light">
+    <div class="columns p-1">
+      <div class="column is-large">
+        <div class="box">
+          <h3 class="is-size-3">Fill out some info first 💁</h3>
+          <div class="field-body mb-4">
+            <div class="field">
+              <label class="label">Company Name</label>
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" id="companyName" name="companyName" placeholder="Company name">
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-building"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Company Logo</label>
+              <p class="control is-expanded has-icons-left has-icons-right">
+                <input class="input" type="url" id="companyLogo" name="companyLogo" placeholder="Logo URL ">
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-image"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <label class="label">Company Website</label>
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="url" id="companyWebUrl" name="companyWebUrl" placeholder="Website URL">
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-link"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Header BG image</label>
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="url" id="headerBgUrl" name="headerBgUrl"
+                  placeholder="Header Background Image URL">
+
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-image"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Cloud Page vanity URL</label>
+              <p class="control is-expanded has-icons-left">
+                <input class="input" type="text" id="mcPageName" name="mcPageName" placeholder="e.g. unsub-url">
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-gear"></i>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="field mt-4">
+            <div class="control">
+              <label class="checkbox">
+                <input id="isMarketingOnly" type="checkbox">
+                Is Marketing Cloud Connected to Sales Cloud?
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <h3 class="is-size-3">Going Social? 🤓</h3>
+          <div class="control has-icons-left mt-4">
+            <div class="select">
+              <select id="goingSocial">
+                <option value="" selected>Are we going Social ?</option>
+                <option value="yes">Ya, why not</option>
+                <option value="no">Nope, not really</option>
+              </select>
+            </div>
+            <div class="icon is-small is-left">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+          </div>
+          <div id="ifSocial" style="display: none;">
+            <div class="field-body mt-4 mb-4">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="url" id="socialFb" name="socialFb"
+                    placeholder="https://www.facebook.com/awesome">
+                  <span class="icon is-small is-left">
+                    <i class="fa-brands fa-facebook"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="url" id="socialTw" name="socialTw"
+                    placeholder="https://www.twitter.com/awesome">
+                  <span class="icon is-small is-left">
+                    <i class="fa-brands fa-twitter"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="url" id="socialIn" name="socialIn"
+                    placeholder="https://www.linkedin.com/awesome">
+                  <span class="icon is-small is-left">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="url" id="socialIm" name="socialIm"
+                    placeholder="https://www.instagram.com/awesome">
+                  <span class="icon is-small is-left">
+                    <i class="fa-brands fa-instagram"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="url" id="socialYt" name="socialYt"
+                    placeholder="https://www.youtube.com/awesome">
+                  <span class="icon is-small is-left">
+                    <i class="fa-brands fa-youtube"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="box">
+          <h3 class="is-size-3">There you go 🥷</h3>
+          <div class="field">
+            <label class="label">Resulting Code</label>
+            <div class="control">
+              <textarea id="myHtmlCode" class="textarea" placeholder="Textarea"></textarea>
+            </div>
+          </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <button id="submit" class="button is-link">
+                <span class="icon">
+                  <i class="fa-solid fa-rocket"></i>
+                </span>
+                <span>Go Go</span></button>
+            </div>
+            <div class="control">
+              <button id="copyCode" class="button is-link is-light"><span class="icon">
+                  <i class="fa-solid fa-copy"></i>
+                </span>
+                <span>Copy code</span></button>
+            </div>
+            <div class="control">
+              <button id="editCode" class="button is-link is-light"><span class="icon">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </span>
+                <span>Edit code</span></button>
+            </div>
+            <div class="control">
+              <button id="reloadPage" class="button is-link is-light"><span class="icon">
+                  <i class="fa-solid fa-spray-can-sparkles"></i>
+                </span>
+                <span>Reset</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-large">
+        <div class="box">
+          <h3 class="is-size-3">Pimp out this page a little bit 🧑‍🎨</h3>
+          <div class="img-map-container">
+            <img class="unsub-map" src="images/page-desabo-neutre.png" alt="unsub page">
+            <div class="pageNavBarColor light-label">
+              <label for="pageNavBarColor">Navigation Bar</label>
+              <input type="color" name="pageNavBarColor" id="pageNavBarColor" value="#03D1B2">
+            </div>
+            <div class="pageHeaderTextColor light-label">
+              <label for="pageHeaderTextColor">Header Text Color</label>
+              <input type="color" name="pageHeaderTextColor" id="pageHeaderTextColor" value="#363636">
+            </div>
+            <div class="pageBodyColor light-label">
+              <label for="pageBodyColor">Page Body Bg Color</label>
+              <input type="color" name="pageBodyColor" id="pageBodyColor" value="#F5F5F5">
+            </div>
+            <div class="pageBodyTitleColor dark-label">
+              <label for="pageBodyTitleColor">pageBodyTitleColor</label>
+              <input type="color" name="pageBodyTitleColor" id="pageBodyTitleColor" value="#00947E">
+            </div>
+
+            <div class="pageBodyTextColor dark-label">
+              <label for="pageBodyTextColor">pageBodyTextColor</label>
+              <input type="color" name="pageBodyTextColor" id="pageBodyTextColor" value="#4A4A4A">
+            </div>
+
+            <div class="pageBtnColor dark-label">
+              <input type="color" name="pageBtnColor" id="pageBtnColor" value="#03D1B2">
+              <label for="pageBtnColor">pageBtnColor</label>
+            </div>
+
+            <div class="pageBtnTextColor dark-label">
+              <input type="color" name="pageBtnTextColor" id="pageBtnTextColor" value="#4A4A4A">
+
+              <label for="pageBtnTextColor">pageBtnTextColor</label>
+            </div>
+            <div class="pageBtnHoverColor dark-label">
+              <input type="color" name="pageBtnHoverColor" id="pageBtnHoverColor" value="#00947E">
+              <label for="pageBtnHoverColor">pageBtnHoverColor</label>
+            </div>
+            <div class="pageBtnTextHoverColor dark-label">
+              <input type="color" name="pageBtnTextHoverColor" id="pageBtnTextHoverColor" value="#F5F5F5">
+              <label for="pageBtnTextHoverColor">pageBtnTextHoverColor</label>
+            </div>
+
+            <div class="pageFooterColor dark-label">
+              <label for="pageFooterColor">pageFooterColor</label>
+              <input type="color" name="pageFooterColor" id="pageFooterColor" value="#00947E">
+            </div>
+
+            <div class="pageFooterTextColor dark-label">
+              <label for="pageFooterTextColor">pageFooterTextColor</label>
+              <input type="color" name="pageFooterTextColor" id="pageFooterTextColor" value="#363636">
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <footer class="footer">
+    <div class="has-text-centered">
+      <figure class="image is-64x64 footer-logo">
+        <img src="../../images/home/logo-thibs-hub-small.png" alt="MC Builder">
+      </figure>
+    </div>
+
+    <div class="content has-text-centered">
+      <p>
+        <strong>MC Builder</strong> by <a href="https://github.com/MarketingThibs">Marketing Thibs</a>. The source code
+        is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+
+  </footer>
+
+  <script src="builder-scripts.js"></script>
+</body>
+
+</html>
