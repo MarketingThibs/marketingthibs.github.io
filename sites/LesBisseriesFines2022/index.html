@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>🍿 Les Bisseries Fines 2022</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#3C2B61">
+
+        <!-- uikit -->
+        <link rel="stylesheet" href="uikit-3.11.0/css/uikit.min.css" />
+        <script src="uikit-3.11.0/js/uikit.min.js"></script>
+        <script src="uikit-3.11.0/js/uikit-icons.min.js"></script>
+        <!-- icon -->
+        <link rel="icon" type="image/png" href="images/rubik.png">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet">
+        
+        <!-- SEO -->
+        <meta property="og:title" content="🍿 Les Bisseries Fines 2022">
+        <meta name="description" content="The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.">
+        <meta property="og:description" content="The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.">
+        <meta property="og:image" content="images/rubik.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="200">
+        <meta property="og:image:height" content="200">
+        <meta property="og:url" content="https://les-bisseries-fines-2022.herokuapp.com">
+
+        <style type="text/css">
+        /* variables */
+        :root {
+            --deepPurple: #3C2B61;
+            --lightPurple: #7055AB;
+            --palePurple: #f7f6f8;
+            --sable : #FFE7BD;
+            --lightSable : #fdf2df;
+            --pink : #FF4F7E;
+            --red : #A41214;
+            --shinyGrey : #F1F1FF;
+            --darkGrey : #333333;
+            --flatGrey :#dcdce9 ;
+            --brown :#7F3335 ;
+            --deepBrown : #34302F;
+        /* chart => https://www.schemecolor.com/80s-retro-2.php */
+        }
+        /* google fonts */
+       
+        /* nav */
+
+        /* header */
+        .header {
+            background-color: var(--deepPurple);
+            /* font-family: 'Bangers', cursive; */
+            font-family: 'Faster One', cursive;
+        }
+        .glow {
+            color: #F1F1FF;
+            /* font-family: 'Bangers', cursive; */
+            font-family: 'Faster One', cursive;
+            font-size: 80px;
+            color: #fff;
+            text-align: center;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        .header-mobile-menu {
+            font-family: 'Faster One', cursive;
+            color: var(--shinyGrey);
+
+        }
+        .text-mobile-menu {
+            font-family: 'Bangers', cursive;
+            color: var(--sable);
+        }
+        @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7055AB, 0 0 40px #7055AB, 0 0 50px #7055AB, 0 0 60px #7055AB, 0 0 70px #7055AB;
+        }
+        
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #FF4F7E, 0 0 40px #ff4da6, 0 0 50px #FF4F7E, 0 0 60px #FF4F7E, 0 0 70px #FF4F7E, 0 0 80px #FF4F7E;
+        }
+        }
+        div.animated-title {
+            background: linear-gradient(-45deg, #757575, #BFC1C2, #D8D8D8, #F1F1FF);
+            background-size: 200%;
+            font-family: 'Bangers', cursive;
+            /* font-family: 'Faster One', cursive; */
+            /* font-family: 'Luckiest Guy', cursive; */
+            font-weight: 900;
+            font-size: 10vw;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animated_text 5s ease-in-out infinite;
+            -moz-animation: animated_text 5s ease-in-out infinite;
+            -webkit-animation: animated_text 5s ease-in-out infinite;
+        }
+
+        @keyframes animated_text {
+            0% { background-position: 0px 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0px 50%; }
+        }
+
+        /* Header title fonts */
+        .section-title {
+            font-family: 'Faster One', cursive;
+            color: var(--sable);
+        }
+        .days-tabs {
+            font-family: 'Bangers', cursive;
+            color: var(--sable);
+            font-size: 1.4em;
+        }
+        .program-title {
+            font-family: 'Bangers', cursive;
+            color: var(--sable);
+        }
+        .uk-offcanvas-bar {
+            background-color: var(--deepPurple);
+        }
+        .badge-dolly {
+            background-color: var(--pink);
+            color: var(--shinyGrey);
+        }
+        .badge-cannon {
+            background-color: var(--deepPurple);
+            color: var(--shinyGrey);
+        }
+        .badge-mad {
+            background-color: var(--red);
+            color: var(--shinyGrey);
+        }
+        .badge-scene {
+            background-color: var(--brown);
+        }
+        .badge-scene2 {
+            background-color: var(--deepBrown);
+        }
+        .uk-text-primary {
+            color: var(--deepPurple);
+        }
+        .program {
+            background-color: var(--lightPurple);
+        }
+        .merch-section {
+            background-color: var(--sable);
+        }
+        .merch-section h1 {
+            color: var(--deepPurple);
+        }
+        .uk-card-media-top img {
+            border-top-left-radius: 27px;
+            border-top-right-radius: 27px;
+        }
+        .merch-card-title {
+            font-family: "Bangers", cursive;
+        }
+        .merch-card {
+            background-color: var(--palePurple);
+        }
+        .merch-badge-price {
+            font-family: "Bangers", cursive;
+            background-color: var(--deepPurple);
+            color: var(--shinyGrey);            
+        }
+        .lieu-title {
+            font-family: 'Faster One', cursive;
+            color: var(--shinyGrey);
+        }
+        .location-title {
+            font-family: 'Bangers', cursive;
+            color: var(--deepPurple);
+        }
+        .location-card {
+            background-color: var(--lightSable);
+        }
+        .footer {
+            background-color: var(--shinyGrey);
+        }
+
+        /* vertical timeline */
+        
+        /* /vertical timeline */
+        </style>
+    </head>
+    <body>
+    <!-- NAV MENU -->
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
+            <div class="uk-navbar-center">
+                <div class="uk-navbar-center-left">
+                    <div>
+                        <ul class="uk-navbar-nav uk-visible@m">
+                            <li><a href="#" class="" uk-scroll>LBF</a>
+                            </li>
+                            <li><a href="#program" class="" uk-scroll>Programme</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="uk-navbar-item uk-logo" href="#" uk-scroll><img class="uk-navbar-center" src="images/rubik.png"
+                        height="80px" width="80px" /></a>
+                <div class="uk-navbar-center-right">
+                    <div>
+                        <ul class="uk-navbar-nav uk-visible@m">
+                            <li><a href="#merch" class="" uk-scroll>Le Merch'</a></li>
+                            <li><a href="#lieu" class="" uk-scroll>Venir</a></li>
+
+                        </ul>
+                    </div>
+                    <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #offcanvas-push">
+                        <span class="uk-margin-small-right cursive-font"> Menu </span> <span
+                            uk-navbar-toggle-icon></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h3 class="header-mobile-menu"><b>MENU</b></h3>
+            <a href="#" class=" text-mobile-menu">LBF</a><br>
+            <a href="#program" class=" text-mobile-menu">Programme</a><br>
+            <a href="#merch" class=" text-mobile-menu">Le Merch'</a><br>
+            <a href="#lieu" class=" text-mobile-menu">Comment venir</a><br>
+        </div>
+    </div>
+    <!-- /NAV MENU -->
+    <!-- SECTION HEADER -->
+    <section class="uk-section uk-padding-remove header">      
+        <div class="uk-container-expand">
+            <div class="uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-height-viewport"
+                data-src="images/philippe.gif" uk-img>
+                <div uk-grid>
+                    <div class="uk-margin-auto uk-width-1-1@s uk-text-center header-content uk-animation-scale-down">
+                        <div class="glow">Les Bisseries Fines</div>                        
+                        <div class="uk-section">
+                            <div class="uk-container-expand uk-child-width-1-1@s" uk-grid>
+                                <div class="uk-text-center uk-light" uk-countdown="date: 2022-08-15T10:00:00+02:00"
+                                    uk-scrollspy="cls: uk-animation-scale-down; repeat: false">
+                                    <span class="uk-countdown-number uk-countdown-days"></span>
+                                    <span class="uk-countdown-separator">J</span>
+                                    <span class="uk-countdown-number uk-countdown-hours"></span>
+                                    <span class="uk-countdown-separator">H</span>
+                                    <span class="uk-countdown-number uk-countdown-minutes"></span>
+                                    <span class="uk-countdown-separator">m</span>
+                                    <span class="uk-countdown-number uk-countdown-seconds"></span>
+                                    <span class="uk-countdown-separator">s</span>
+                                </div>
+                    
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /SECTION HEADER -->
+    <section id="program" class="uk-section program">
+        <div class="uk-container">
+            <h1 class="section-title">Demandez le programme</h1>
+            <ul uk-tab>
+                <li><a href="#" class="days-tabs">Samedi</a></li>
+                <li><a href="#" class="days-tabs">Dimanche</a></li>
+                <li><a href="#" class="days-tabs">Lundi</a></li>
+            </ul>
+            <ul class="uk-switcher uk-margin">
+                <li>
+                    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+                        <div class="uk-text-center">
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">9 h</h3>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-dolly">Dolly Vintage</span> <span class="uk-badge uk-margin-left badge-scene">Richard Harriscene</span>
+                        </h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider  <span class="uk-badge uk-margin-left badge-mad">Session Mad</span> <span class="uk-badge uk-margin-left badge-scene2">Movie Camp</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+                        <div class="uk-text-center">
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">10 h 45</h3>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-dolly">Dolly True HD</span> <span class="uk-badge uk-margin-left badge-scene">Richard Harriscene</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-cannon">CANNON</span> <span class="uk-badge uk-margin-left badge-scene2">Movie Camp</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                    </div>  
+                    <div class="uk-width-1-1 uk-text-center uk-margin-large" >
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">12 h 30 - Déjeuner</h3>
+                            <img src="images/bread.png" alt="" class="uk-img" style="height: 80px;">
+                        </div>             
+                    </div>
+                    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+                        <div class="uk-text-center">
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">10 h 45</h3>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-dolly">Dolly True HD</span> <span class="uk-badge uk-margin-left badge-scene">Richard Harriscene</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-cannon">CANNON</span> <span class="uk-badge uk-margin-left badge-scene2">Movie Camp</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                    </div>   
+                    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+                        <div class="uk-text-center">
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">10 h 45</h3>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-mad">Session Mad</span> <span class="uk-badge uk-margin-left badge-scene">Richard Harriscene</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-cannon">CANNON</span> <span class="uk-badge uk-margin-left badge-scene2">Movie Camp</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                    </div>    
+                    <div class="uk-width-1-1 uk-text-center uk-margin-large" >
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">19 h 30 - Diner</h3>
+                            <img src="images/caipirinha.png" alt="" class="uk-img" style="height: 80px;">
+                        </div>             
+                    </div>    
+                    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+                        <div class="uk-text-center">
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">10 h 45</h3>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-dolly">Dolly True HD</span> <span class="uk-badge uk-margin-left badge-scene">Richard Harriscene</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-cannon">CANNON</span> <span class="uk-badge uk-margin-left badge-scene2">Movie Camp</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                    </div>   
+                    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+                        <div class="uk-text-center">
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">10 h 45</h3>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-mad">Session Mad</span> <span class="uk-badge uk-margin-left badge-scene">Richard Harriscene</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                        <div>
+                            <h3 class="uk-card-title uk-margin-remove-bottom program-title">
+                            Kamen Rider <span class="uk-badge uk-margin-left badge-cannon">CANNON</span> <span class="uk-badge uk-margin-left badge-scene2">Movie Camp</span></h3>
+                            <p class="uk-light">Les 3 premiers épisodees JAP, 1971 3x25 min VOSTA</p>
+                        </div>
+                    </div>    
+                </li>  
+                <li>
+                   <h1 class="uk-light"> A venir Dimanche...</h1>
+                </li>
+                <li>
+                    <h1 class="uk-light"> A venir Lundi...</h1>
+                </li>              
+            </ul>
+            </div>
+        <div class="uk-container uk-margin-large">
+            <a href="files/best-pdf-ever.pdf" target="_Blank" class="uk-button uk-button-secondary uk-width-1-1">Download the fucking program</a>            
+        </div>
+
+    </section>
+
+<section id="merch">
+    <div class="uk-section uk-background-cover merch-section" style="background-image: url();">
+        <div class="uk-container">
+            <h1 class="section-title">Zavez vu le merch un peu ?</h1>
+            <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="masonry: true">
+                <div>
+                    <div class="uk-flex uk-flex-center uk-flex-middle">
+                        <div class="uk-card uk-card-default merch-card">
+                            <div class="uk-card-media-top">
+                                <img src="https://www.placecage.com/400/400" alt="">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title merch-card-title">Media Top <span class="uk-badge uk-margin-left merch-badge-price uk-margin-left uk-padding-small">20 €</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-flex uk-flex-center uk-flex-middle">
+                        <div class="uk-card uk-card-default merch-card">
+                            <div class="uk-card-media-top">
+                                <img src="https://www.placecage.com/400/600" alt="">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title merch-card-title">Media Top <span class="uk-badge uk-margin-left merch-badge-price uk-margin-left uk-padding-small">20 €</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-flex uk-flex-center uk-flex-middle">
+                        <div class="uk-card uk-card-default merch-card">
+                            <div class="uk-card-media-top">
+                                <img src="https://www.placecage.com/400/200" alt="">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title merch-card-title">Media Top <span class="uk-badge uk-margin-left merch-badge-price uk-margin-left uk-padding-small">20 €</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-flex uk-flex-center uk-flex-middle">
+                        <div class="uk-card uk-card-default merch-card">
+                            <div class="uk-card-media-top">
+                                <img src="https://www.placecage.com/400/280" alt="">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title merch-card-title">Media Top <span class="uk-badge uk-margin-left merch-badge-price uk-margin-left uk-padding-small">20 €</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-flex uk-flex-center uk-flex-middle">
+                        <div class="uk-card uk-card-default merch-card">
+                            <div class="uk-card-media-top">
+                                <img src="https://www.placecage.com/c/400/200" alt="">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title merch-card-title">Media Top <span class="uk-badge uk-margin-left merch-badge-price uk-margin-left uk-padding-small">20 €</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-flex uk-flex-center uk-flex-middle">
+                        <div class="uk-card uk-card-default merch-card">
+                            <div class="uk-card-media-top">
+                                <img src="https://www.placecage.com/c/400/600" alt="">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title merch-card-title">Media Top <span class="uk-badge uk-margin-left merch-badge-price uk-margin-left uk-padding-small">20 €</span></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section id="lieu" class="uk-section-default">
+            <div class="uk-section uk-background-cover" style="background-image: url(images/space-travel.jpeg);">
+                <div class="uk-container">
+                    <h1 class="lieu-title">Je sais où tu te caches !</h1>
+
+                    <div class="uk-child-width-1-2@m uk-grid-small uk-grid-match" uk-grid>                   
+                        <div>
+                            <div class="uk-card uk-card-default uk-card-body location-card">
+                                <h3 class="uk-card-title uk-text-primary location-title">Hébergement</h3>
+                                <p>
+                                    Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. 
+                                    <br><br>
+                                    The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uk-card uk-card-default uk-card-body location-card">
+                                <h3 class="uk-card-title uk-text-primary location-title">Comment venir ?</h3>                            
+                                <p>  Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. </p>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+            <iframe class="uk-container-expand" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45656.411789285616!2d1.1848140722692126!3d44.34025003757623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ab80990bc906fd%3A0x14041eaa5e900cff!2sMontcuq%2C%2046800%20Montcuq-en-Quercy-Blanc!5e0!3m2!1sen!2sfr!4v1644330798424!5m2!1sen!2sfr" width="100%" height="600" frameborder="0" style="border:0;"
+                allowfullscreen=""></iframe>
+        </section>
+    
+        <!-- /GOOGLE MAP-  -->
+        <!-- FOOTER -->
+    <footer class="footer uk-padding-small">
+        <div class="uk-container">
+            <div class="uk-child-width-1-1@s uk-child-width-1-1@m uk-grid uk-grid-stack" uk-grid>
+                <div>
+                    <img src="images/rubik.png" class="uk-margin-auto" alt="rubik" height="70px" width="70px"> <i class="cursive-font uk-text-primary">Les bisseries Fines 2022</i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+    </body>
+</html>
