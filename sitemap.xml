@@ -8,8 +8,54 @@
 
 
 <url>
-  <loc>https://oss-ipsum.herokuapp.com/index.html</loc>
-  <lastmod>2022-06-17T17:02:19+00:00</lastmod>
+  <loc>https://marketingthibs.github.io/index.html</loc>
+  <lastmod>2022-12-09T09:42:05+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://marketingthibs.github.io/sites/mt-marketing-cloud-builder/home.html</loc>
+  <lastmod>2022-12-09T09:42:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marketingthibs.github.io/sites/oss-ipsum/index.html</loc>
+  <lastmod>2022-12-09T09:42:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marketingthibs.github.io/sites/LesBisseriesFines2022/index.html</loc>
+  <lastmod>2022-12-09T09:42:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marketingthibs.github.io/sites/share-the-noise/home.html</loc>
+  <lastmod>2022-12-09T09:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://marketingthibs.github.io/sites/LesBisseriesFines2022/files/best-pdf-ever.pdf</loc>
+  <lastmod>2022-12-09T09:42:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marketingthibs.github.io/sites/share-the-noise/oss-117.html</loc>
+  <lastmod>2022-12-09T09:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marketingthibs.github.io/sites/share-the-noise/la-classe-americaine.html</loc>
+  <lastmod>2022-12-09T09:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marketingthibs.github.io/sites/share-the-noise/gros-nanars.html</loc>
+  <lastmod>2022-12-09T09:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://marketingthibs.github.io/sites/share-the-noise/classique-fr.html</loc>
+  <lastmod>2022-12-09T09:42:06+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
