@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFMC - Create DEs From Sheet</title>
+    <!-- handsome tables -->
+    <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+    <!-- demo https://codesandbox.io/s/handsontable-javascript-data-grid-hello-world-app-forked-8tct2l -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css">
+</head>
+
+<body>
+    <h1>🧙 Let the magic happens</h1>
+
+    <h2>⚙️ Data Extension Settings</h2>
+    <label for="deName">Name of your future data extension</label>
+    <input type="text" name="deName" id="deName">
+    
+    
+    <label for="deFolderName">In Which folder you want to put your futre DE (default will be
+        <code>Data Extension</code>)?</label>
+    <input type="text" name="deFolderName" id="deFolderName" placeholder="Data Extensions">
+    
+    <label for="isSendable">Will your DE be sendable ?</label>
+    <input type="checkbox" id="isSendable">
+
+    <div id="deSendableFieldGroup">
+        <label for="deSendableField">Which field will be used to match the subscriberkey ?</label>
+        <input type="text" list="sendableSamples" name="deSendableField" id="deSendableField">
+        <datalist id="sendableSamples">
+            <option value="SubscriberKey">
+            <option value="ContactKey">
+            <option value="ContactId">
+            <option value="LeadId">
+            <option value="PersonContactId">
+            <option value="Id">
+          </datalist>
+    </div>
+    
+
+    <label for="hasRetention">Do you need a retention policy ?</label>
+    <input type="checkbox" id="hasRetention">
+
+    <div id="hasRetentionGroup">
+        <label for="DataRetentionPeriodLength">Data Retention Period Length</label>
+        <input type="number" name="DataRetentionPeriodLength" id="DataRetentionPeriodLength">
+
+        <select name="DataRetentionPeriod" id="DataRetentionPeriod">
+            <option value="Days">Days</option>
+            <option value="Weeks">Weeks</option>
+            <option value="Months">Months</option>
+            <option value="Years">Years</option>
+        </select>
+        
+        <input type="checkbox" name="RowBasedRetention" id="RowBasedRetention">   
+        <label for="RowBasedRetention">Row Based Retention ?</label>
+
+        <input type="checkbox" name="DeleteAtEndOfRetentionPeriod" id="DeleteAtEndOfRetentionPeriod">
+        <label for="DeleteAtEndOfRetentionPeriod">Delete At End Of Retention Period ?</label>
+
+
+        <input type="checkbox" name="ResetRetentionPeriodOnImport" id="ResetRetentionPeriodOnImport">
+        <label for="ResetRetentionPeriodOnImport">Reset Retention Period On Import ?</label>
+    </div>
+
+    <h2>🧑‍🔬 Data extension fields</h2>
+    <div id="handsomeTable"></div>
+
+
+    <h2>🚀 Controls</h2>
+    <button id="exportTable">EXPORT TABLE 🧑‍🚀</button>
+    <button id="getDataBtn">GET JSON 🧑‍🚀</button>
+    
+
+    <h2>🔥 Results</h2>
+    <hr style="border-top: 4px dotted racinggreen;">
+    <textarea name="ssjsCreateDeScript" id="ssjsCreateDeScript" cols="120" rows="40"></textarea>
+    <button id="copySsjs">COPY SSJS 🧑‍🚀</button>
+    <script src="main.js"></script>
+</body>
+
+</html>
