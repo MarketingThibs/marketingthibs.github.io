@@ -15,8 +15,9 @@
                 ['EmailAddress', 'EmailAddress', 254, false, true, 0],
                 ['MobilePhone', 'Phone', 20, false, false, 0]
             ],
-            width: 'auto',
-            height: 'auto',
+            width: '100%',
+            height: 'auto',  
+            beforeRefreshDimensions() { return false; },       
             rowHeaders: false,
             colHeaders: ['FieldName', 'FieldType', 'Maxlength', 'IsPrimaryKey', 'IsRequired', 'Scale'],
             columns: [

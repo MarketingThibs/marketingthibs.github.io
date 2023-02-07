@@ -6,28 +6,359 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SFMC - Create DEs From Sheet</title>
+    <link rel="icon" type="image/x-icon" href="../../images/home/logo-thibs-hub-small.ico">
+    <!-- SEO -->
+    <meta property="og:title" content="SFMC - Create DEs From Sheet">
+    <meta name="description" content="Create Data Extension from a table, or a pasted cell range from Google Sheet or Excel/Calc">
+    <meta property="og:description" content="Create Data Extension from a table, or a pasted cell range from Google Sheet or Excel/Calc">
+    <meta property="og:image" content="../../images/home/logo-thibs-hub-small.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="304">
+    <meta property="og:image:height" content="202">
+    <meta property="og:url" content="https://mt-marketing-cloud-builder.herokuapp.com/home.html">
+    <!-- Bulma -->
+    <link rel="stylesheet" href="../../styles/bulma/css/bulma.css">
+    <link rel="stylesheet" href="../../index.html">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/f5be78694e.js" crossorigin="anonymous"></script>
+
     <!-- handsome tables -->
     <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
     <!-- demo https://codesandbox.io/s/handsontable-javascript-data-grid-hello-world-app-forked-8tct2l -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css">
+    
+    <style>
+        :root {
+            --special-grey: #f2f1ef;
+            --orange-light: #FBA81F;
+            --orange-super-light: #fffaeb;
+            --orange-dark: #F87537;
+            --green-light: #effaf5;
+            --green-dark: #00947e;
+            --grey-dark: #333;
+        }
+        .footer {
+            background: rgb(239, 250, 245);
+            background: linear-gradient(180deg, rgba(239, 250, 245, 1) 0%, rgba(241, 243, 243, 1) 100%);
+        }
+
+        .hero {       
+            background-image: url(../../images/home/stacked-peaks.png);
+            background-size: cover;
+            background-repeat: cover;
+        }
+        .de-settings {
+            /* background-image: url(../../images/sites/topography-dark.svg); */
+            background-color: var(--green-light);
+            background-repeat: repeat-x;
+        }
+
+        .hero-body p.title {
+            font-family: 'Fascinate Inline', cursive;
+            color: var(--grey-dark);
+        }
+
+        h1.title {
+            font-family: 'Fascinate Inline', cursive;
+        }
+        /* p.subtitle {
+            color: var(--grey-dark)
+        } */
+
+        .footer-logo img {
+            height: 64px;
+            width: 64px;
+        }
+
+        .special-grey {
+            color: var(--special-grey);
+        }
+
+        .orange-light {
+            color: var(--orange-light);
+        }
+
+        .orange-dark {
+            color: var(--orange-dark);
+            /* color: radial-gradient(circle, rgba(251,168,31,1) 0%, rgba(248,117,55,1) 100%); */
+        }
+
+        .is-tile-gradient {
+            background: rgb(255, 250, 235);
+            background: linear-gradient(0deg, rgba(255, 250, 235, 1) 0%, rgba(251, 168, 31, 1) 100%);
+        }
+
+        .is-gradient {
+            background: rgb(251, 168, 31);
+            background: radial-gradient(circle, rgba(251, 168, 31, 1) 0%, rgba(248, 117, 55, 1) 89%);
+            border-color: transparent;
+            color: var(--special-grey);
+        }
+
+        .is-gradient:hover {
+            border-color: var(--orange-dark);
+        }
+        .modal-content {
+            width: 90%;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>🧙 Let the magic happens</h1>
+    <section class="hero has-background-primary-dark has-text-light is-medium">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <header class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <img src="../../images/logo-thibs-hub-dark.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-end has-text-light">
+                            <a href="../../index.html" class="navbar-item is-active">
+                                Home
+                            </a>
+                            <span class="navbar-item">
+                                <div class="dropdown is-hoverable is-inverted">
+                                    <div class="dropdown-trigger">
+                                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                            <span class="icon">
+                                                <i class="fa-solid fa-rocket"></i>
+                                            </span>
+                                            <span>Tools</span>
+                                            <span class="icon is-small">
+                                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                        <div class="dropdown-content">
+                                            <div class="dropdown-item">
+                                                <a href="home.html" class="dropdown-item">
+                                                    Unsub Page Builder
+                                                </a>
+                                                <a href="../oss-ipsum/index.html" class="dropdown-item">
+                                                    Oss Ipsum Generator
+                                                </a>
+                                                <a href="https://marketplace.visualstudio.com/items?itemName=MarketingThibs.ampscriptsnippets"
+                                                    class="dropdown-item">
+                                                    AMPscript code snippet
+                                                </a>
+                                                <a href="https://marketplace.visualstudio.com/items?itemName=MarketingThibs.oss117psum"
+                                                    class="dropdown-item">
+                                                    OSS VS Extension
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                            <span class="navbar-item">
+                                <a href="https://github.com/MarketingThibs" class="button is-warning is-inverted">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>MarketingThibs</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body ">
+            <div class="container has-text-centered">
+                <p class="title">
+                    Marketing Cloud Building Tools
+                </p>
+                <p class="subtitle">
+                    SFMC - Create DEs From Sheet
+                </p>
+            </div>
+        </div>
+    
+    
+    </section>
+    <section class="section de-settings">
+            <!-- Handsometable -->
+            <div class="columns p-1">
+                <div class="column">
+                    <div class="box">
+                        <h3 class="is-size-3"><i class="orange-light fa-solid fa-table-cells"></i>
+                            Data extension fields
+                        </h3>
+                        <div id="handsomeTable"></div>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    <div class="box p-4">
+                        <h3 class="is-size-3"><i class="orange-light fa-solid fa-hat-wizard"></i>
+                            Results
+                        </h3>
+                        <div class="field">
+                            <p class="control">
+                                <button class="button is-fullwidth is-primary is-outlined" id="exportTable"><i class="fa-solid fa-download"></i>&nbsp;EXPORT TABLE</button>
+                            </p>                                           
+                        </div>
+                        <div class="field">
+                            <p class="control">
+                                <button class="button is-fullwidth is-primary" id="getDataBtn"><i class="fa-solid fa-code"></i>&nbsp;GET SSJS</button>
+                            </p>       
+                        </div>
+                        <div class="field">
+                            <p class="control">
+                                <button class="button is-fullwidth is-primary" id="copySsjs"><i class="fa-solid fa-copy"></i>&nbsp;COPY SSJS 🧑‍🚀</button>
+                            </p>       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /Handsometable -->
+        <!-- DE_settings -->
+        <div class="columns p-1">
+            <div class="column is-large">
+                <div class="box">
+                    <h3 class="is-size-3"><i class="orange-light fa-solid fa-sliders"></i> Data Extension Settings</h3>
+                    <div class="field-body mb-4">
+                        <div class="field">
+                            <label class="label">Name of your future data extension</label>
+                            <p class="control is-expanded has-icons-left">
+                                <input class="input" type="text" name="deName" id="deName" placeholder="DE Name">
+                                <span class="icon is-small is-left">
+                                    <i class="fa-solid fa-database"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <label class="label">Your DE Folder (default will be <code>Data Extension</code>)?</label>
+                            <p class="control is-expanded has-icons-left">
+                                <input class="input" type="text" name="deFolderName" id="deFolderName" placeholder="DE Folder">
+                                <span class="icon is-small is-left">
+                                    <i class="fa-solid fa-folder"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- sendable inputs -->
+                    <div class="field-body">
+                        <div class="field">                            
+                            <input type="checkbox" id="isSendable">        
+                            <label for="isSendable">Will your DE be sendable ?</label>
+                        </div>                        
+                    </div>
+                    <div class="field-body mb-3" id="deSendableFieldGroup">
+                        <div class="field" >
+                            <label class="label" for="deSendableField">Which field will be used to match the subscriberkey ?</label>                                
+                            <p class="control is-expanded has-icons-left">
+                                <input class="input" type="text" list="sendableSamples" name="deSendableField" id="deSendableField">
+                                <datalist id="sendableSamples">
+                                    <option value="SubscriberKey">
+                                    <option value="ContactKey">
+                                    <option value="ContactId">
+                                    <option value="LeadId">
+                                    <option value="PersonContactId">
+                                    <option value="Id">
+                                  </datalist>
+                                <span class="icon is-small is-left">
+                                    <i class="fa-solid fa-key"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /sendable inputs -->
+                    <!-- retention inputs -->
+                    <div class="field-body">
+                        <div class="field">                            
+                            <input type="checkbox" id="hasRetention">
+                            <label for="hasRetention">Do you need a retention policy ?</label>
+                        </div>                        
+                    </div>
+                    <div class="field-body" id="hasRetentionGroup">
+                        <p class="is-underlined	">Data Retention Period Length</p>
+                        <div class="columns">
+                            <div class="column is-one-quarter">
+                                <div class="field ">
+                                    <p class="control is-expanded has-icons-left">
+                                        <input class="input" type="number" name="DataRetentionPeriodLength" id="DataRetentionPeriodLength">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa-solid fa-hashtag"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <p class="control is-expanded has-icons-left">
+                                        <span class="select">
+                                            <select name="DataRetentionPeriod" id="DataRetentionPeriod">
+                                                <option value="Days">Days</option>
+                                                <option value="Weeks">Weeks</option>
+                                                <option value="Months">Months</option>
+                                                <option value="Years">Years</option>
+                                            </select>
+                                        </span>
+                                        <span class="icon is-small is-left">
+                                            <i class="fa-solid fa-calendar"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="is-underlined">Additional Settings</p>
+                        <div class="field">
+                            <input type="checkbox" name="RowBasedRetention" id="RowBasedRetention">
+                            <label for="RowBasedRetention">Row Based Retention ?</label>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" name="DeleteAtEndOfRetentionPeriod" id="DeleteAtEndOfRetentionPeriod">
+                            <label for="DeleteAtEndOfRetentionPeriod">Delete At End Of Retention Period ?</label>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" name="ResetRetentionPeriodOnImport" id="ResetRetentionPeriodOnImport">
+                            <label for="ResetRetentionPeriodOnImport">Reset Retention Period On Import ?</label>
+                        </div>
+                    
+                    </div>
+                    <!-- /retention inputs -->
 
-    <h2>⚙️ Data Extension Settings</h2>
-    <label for="deName">Name of your future data extension</label>
-    <input type="text" name="deName" id="deName">
+                </div>                
+            </div>
+            <div class="column is-large">
+                <div class="box">
+                    <h3 class="is-size-3">
+                        <i class="orange-light fa-solid fa-code"></i> SSJS Script Activity
+                    </h3>
+                    <textarea class="textarea" name="ssjsCreateDeScript" id="ssjsCreateDeScript" rows="4"></textarea>
+                </div>
+            </div>
+                <!-- /De settings -->
+
+    </section>
+
+    <!-- <h1>🧙 Let the magic happens</h1>
+
+    <h2>⚙️ Data Extension Settings</h2> -->
+    <!-- <label for="deName">Name of your future data extension</label> -->
+    <!-- <input type="text" name="deName" id="deName"> -->
     
     
-    <label for="deFolderName">In Which folder you want to put your futre DE (default will be
+    <!-- <label for="deFolderName">In Which folder you want to put your futre DE (default will be
         <code>Data Extension</code>)?</label>
     <input type="text" name="deFolderName" id="deFolderName" placeholder="Data Extensions">
-    
-    <label for="isSendable">Will your DE be sendable ?</label>
-    <input type="checkbox" id="isSendable">
+     -->
+    <!-- <label for="isSendable">Will your DE be sendable ?</label>
+    <input type="checkbox" id="isSendable"> -->
 
-    <div id="deSendableFieldGroup">
+    <!-- <div id="deSendableFieldGroup">
         <label for="deSendableField">Which field will be used to match the subscriberkey ?</label>
         <input type="text" list="sendableSamples" name="deSendableField" id="deSendableField">
         <datalist id="sendableSamples">
@@ -38,13 +369,13 @@
             <option value="PersonContactId">
             <option value="Id">
           </datalist>
-    </div>
+    </div> -->
     
 
-    <label for="hasRetention">Do you need a retention policy ?</label>
-    <input type="checkbox" id="hasRetention">
+    <!-- <label for="hasRetention">Do you need a retention policy ?</label>
+    <input type="checkbox" id="hasRetention"> -->
 
-    <div id="hasRetentionGroup">
+    <!-- <div id="hasRetentionGroup">
         <label for="DataRetentionPeriodLength">Data Retention Period Length</label>
         <input type="number" name="DataRetentionPeriodLength" id="DataRetentionPeriodLength">
 
@@ -64,21 +395,41 @@
 
         <input type="checkbox" name="ResetRetentionPeriodOnImport" id="ResetRetentionPeriodOnImport">
         <label for="ResetRetentionPeriodOnImport">Reset Retention Period On Import ?</label>
-    </div>
+    </div> -->
 
-    <h2>🧑‍🔬 Data extension fields</h2>
-    <div id="handsomeTable"></div>
+    <!-- <h2>🧑‍🔬 Data extension fields</h2>
+    <div id="handsomeTable"></div> -->
 
 
-    <h2>🚀 Controls</h2>
+    <!-- <h2>🚀 Controls</h2>
     <button id="exportTable">EXPORT TABLE 🧑‍🚀</button>
     <button id="getDataBtn">GET JSON 🧑‍🚀</button>
     
 
     <h2>🔥 Results</h2>
     <hr style="border-top: 4px dotted racinggreen;">
-    <textarea name="ssjsCreateDeScript" id="ssjsCreateDeScript" cols="120" rows="40"></textarea>
-    <button id="copySsjs">COPY SSJS 🧑‍🚀</button>
+    <textarea name="ssjsCreateDeScript" id="ssjsCreateDeScript" cols="120" rows="40"></textarea> -->
+    <!-- <button id="copySsjs">COPY SSJS 🧑‍🚀</button> -->
+        <!-- footer-->
+        <footer class="footer">
+            <div class="has-text-centered footer-logo">
+                <img src="../../images/home/logo-thibs-hub-small.png" alt="Logo MC Thibs">
+            </div>
+    
+            <div class="content has-text-centered">
+                <p>
+                    <a href="https://github.com/MarketingThibs">Marketing Thibs</a>. The
+                    source code
+                    is licensed
+                    <a href="https://opensource.org/licenses/mit-license.php">MIT</a>. 
+                    <br> The website content
+                    is licensed <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                </p>
+            </div>
+    
+        </footer>
+        <!-- /footer -->
+    
     <script src="main.js"></script>
 </body>
 
